@@ -29,10 +29,12 @@ namespace yoketoruV22
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -45,6 +47,7 @@ namespace yoketoruV22
             this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "よけとる2022";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -65,16 +68,22 @@ namespace yoketoruV22
             this.label2.Size = new System.Drawing.Size(147, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "YOU DEAD";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(212, 242);
+            this.label3.Location = new System.Drawing.Point(221, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(247, 47);
             this.label3.TabIndex = 3;
             this.label3.Text = "congratulation";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -99,6 +108,7 @@ namespace yoketoruV22
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
